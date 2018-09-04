@@ -1,0 +1,265 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em
+}
+
+h2 {
+    font-size: 2em
+}
+
+h3 {
+    font-size: 1.5em
+}
+
+a {
+    text-decoration: none;
+    color: papayawhip;
+    transition: letter-spacing 0.5s;
+}
+
+a .nameLine {
+    cursor: pointer;
+    text-decoration: underline;
+
+    margin-bottom: 5px;
+    /* Offset the  */
+    margin-top: -5px;
+    transition: letter-spacing 1s;
+}
+
+a:hover .nameLine {
+    letter-spacing: 2.5em;
+}
+#topnote {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.floating-page {
+    position: absolute;
+    z-index: 1;
+    background-color: #2EAFAC;
+
+    color: black;
+    /* position: absolute; */
+    font-size: 12pt;
+    top: 0;
+    z-index: 1;
+    /* position: fixed; */
+    /* margin: 0; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    width: 101.25%;
+}
+
+/* Fix the react nested div MESS*/
+#app, #app > [data-reactroot], #app > [data-reactroot] > div {
+    height: 100%;
+}
+
+.floating-page.home-page {
+    color: white;
+    background-color: hsla(179, 58%, 43%, 0.5)
+    /* background-color: transparent; */
+}
+
+.responsive-header, .responsive-header a{
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+
+.responsive-header {
+    flex-direction: row;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+.responsive-header:hover > a {
+    color: rgb(220, 220, 220);
+}
+
+.logo {
+    height: 10vw;
+    width: auto;
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 4.25vw;
+}
+
+.nameLine {
+    font-family: 'Space Mono', monospace;
+}
+
+.test-hsl-box {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    transition: margin-bottom 0.5s;
+}
+
+.test-hsl-box:hover {
+    margin-bottom: 5px;
+}
+
+.about {
+    text-indent: 3em;
+    padding: 0 6%
+}
+
+.card-list {
+    list-style-type: none;
+    padding: 0 6%
+}
+
+.card {
+    color: white;
+    width: 97.8%;
+    display: inline-block;
+
+    margin: 0.25em 0;
+
+    transition: letter-spacing 0.5s;
+}
+
+.card-link {
+    transition: letter-spacing 0.5s;
+}
+
+.project-link {
+    font-size: 1em;
+    transition: letter-spacing 0.5s;
+}
+
+.card:hover .project-link {
+    background-color: hsla(220, 50%, 45%, 0.5);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+
+.card:hover .title {
+    letter-spacing: 0.1em;
+}
+
+.card {
+    padding: 10px 0;
+}
+
+.card > * {
+    padding: 0 12px;
+}
+
+.card:hover {
+    /* letter-spacing: 0.025em; */
+}
+
+.title {
+    font-size: 1.5em;
+    transition: letter-spacing 0.5s;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.card:hover .title {
+    /* padding-bottom: 0; */
+}
+
+.card.subtle:hover {
+    /* letter-spacing: 0.0125em; */
+}
+
+.title-type {
+    margin-right: 0.5em;
+}
+
+.card .title-type {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.card .title {
+    margin-top: 0
+}
+
+
+.card .card-photo {
+    display: block;
+    margin: 0.25em auto;
+
+    max-height: 6em;
+    width: auto;
+    max-width: 100%;
+}
+
+.eye-button {
+    color: hsla(0, 100%, 100%, 0.7);
+    background-color: transparent;
+
+    min-width: 50px;
+    min-height: 30px;
+    /* padding-right: 5%; */
+    /* padding-top: 4%; */
+    font-size: 1em;
+    position: absolute;
+    left: 0.25em;
+    bottom: 0.25em;
+    z-index: 2;
+
+    transition: color 0.5s, background-color 0.5s;
+
+}
+
+.eye-button:hover {
+    color: hsla(0, 100%, 100%, 1);
+    background-color: hsla(0, 100%, 100%, 0.1);
+    cursor: pointer;
+}
+
+
+@media(min-width: 700px) {
+    .logo {
+        height: 8.5vw;
+        margin-top: 4%;
+    }
+    .nameContainer {
+        font-size: 3.3vw;
+    }
+
+    .responsive-header {
+        margin: 1% 0;
+    }
+
+    .project-link {
+        font-size: 1.5em;
+    }
+
+    .floating-page {
+        font-size: 18pt;
+    }
+
+    .title {
+        font-size: 3em;
+    }
+}
+
+@media(min-width: 600px) {
+}
+
+/* Override the inside rule for hover*/
+.card-link .card-description {
+    letter-spacing: normal;
+}
