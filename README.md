@@ -1,6 +1,6 @@
-This is my personal website http://cwervo.com
+# This is an archival version of this website/repo!
 
-Note: `copy-files.sh` copies files from Reagent to `/docs`, but you can use Make commands instead:
+This is my personal website http://cwervo.com
 
 - Use `make` or `make build` to copy files from reagent into `/docs` to be hosted on Github on next push.
 - Use `make serve` to preview the site
